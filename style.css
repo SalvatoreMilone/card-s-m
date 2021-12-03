@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: auto;
+    margin-top: 10px;
+    font-size: 6px;
+    font-weight: 100;
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    background: linear-gradient(324deg, rgba(0,0,0,1) 40%, rgb(132, 132, 132) 100%);
+    font-family: 'Roboto', sans-serif;
+}
+
+.cardheader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    padding:0 5%;
+    padding-right: 20px;
+}
+
+.cardheadermenu{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.cardheadermenu a{
+    text-decoration: none;
+    color: white;
+}
+
+.cardheadermenu li{
+    margin-right: 10px;
+    opacity: .5;
+    transition: opacity 500ms, font-weigth 500ms;
+}
+
+.cardheadermenu li:hover{
+    opacity: .9;
+    font-weight: 200;
+}
+
+.cardheadermenutitle{
+    font-size: 1.5em;
+    padding-right: 10px;
+    font-weight: 400;
+    opacity: 1 !important;
+}
+
+.cardheaderoption{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+    background-color: rgba(255,255,255,.3);
+    padding: 2px 3px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.cardheaderoption:hover i{
+    transition: color 300ms;
+}
+.cardheaderoption:hover i{
+    color: rgba(255,255,255,.5);
+}
+
+
+.cardheaderoptionimg{
+    background-color: rgb(130, 173, 191);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* ------------------- */
+.cardmain{
+    display: flex;
+    padding: 5% ;
+    height: 85%;
+}
+.cardsection1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 50%;
+    height: 100%;
+    margin-right: 30px;
+}
+
+.cardsection1title{
+    font-size: 3em;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.cardsection1subt{
+    font-size: .9em;
+    color: rgba(255,255,255,.5);
+}
+
+.cardsection1menu{
+    margin-top: 10px ;
+    background-color: rgba(255,255,255,.2);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardsection1menu:hover .cardsection1menuswitch{
+    animation: switchsec1 500ms ease-in-out;
+    left: calc(-100% + 18px);
+    background-color: rgb(56, 194, 112);
+    box-shadow: 0px 2px 15px 3px rgb(56, 194, 112);
+}
+
+.cardsection1menu:hover ul{
+    animation: switchsec1v2 500ms ease-in-out;
+    left: 21px;
+}
+
+.cardsection1menu:hover .cardsection1menuul1{
+    display: none;
+}
+.cardsection1menu:hover .cardsection1menuu2{
+    display: flex !important;
+}
+.cardsection1menu:hover .fa-eye-slash{
+    display: none;
+}
+.cardsection1menu:hover .fa-eye{
+    display: block;
+}
+
+
+.cardsection1menu .cardsection1menuul1, .cardsection1menuu2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    list-style: none;
+    padding: 5px;
+    color: white;
+    position: relative;
+}
+
+.cardsection1menu ul .cardsection1menuhr{
+    height: 1px;
+    background-color: rgba(255,255,255,.1);
+}
+
+.cardsection1menuswitch{
+    width: 21px;
+    height: 100%;
+    background-color: rgb(216, 81, 81);
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 2px 15px 3px rgba(216, 81, 81, 1);
+    transition: all 500ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cardsection1menuswitch i{
+    color: white;
+    font-size: 1.2em;
+}
+
+.cardsection1menuswitch .fa-eye{
+    display: none;
+}
+
+.cardsection1menuu2{
+    display: none !important;
+}
+
+@keyframes switchsec1{
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: calc(-100% + 18px);
+        background-color: rgb(56, 194, 112);
+        box-shadow: 0px 2px 15px 3px rgb(56, 194, 112);
+    }
+}
+
+@keyframes switchsec1v2{
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: 21px;
+    }
+}
+
+.cardsection2{
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+.cardsection2img{
+    background-image: url(https://design-milk.com/images/2021/10/Chalet-Pics-Bois-Lac-Brome-Quebec-Ravi-Handa-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -30px;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
